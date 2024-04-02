@@ -9,8 +9,8 @@ function App() {
       <Job salary={12000} position="Junior SDE" company="Google" />
       <Job salary={10000} position="Project Manager" company="Netflix" />
     </div>
-  )
-}
+  );
+};
 
 const Job = (props) => {
   return (
