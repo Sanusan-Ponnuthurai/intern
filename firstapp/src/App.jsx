@@ -1,25 +1,24 @@
 import { useState } from 'react'
 import './App.css'
 
-function App() {
-  const users = [{name:"Pedro",age:21},{name:"Jake",age:25},{name:"Jessica",age:31}]
+function App () {
+  const planets = [
+    {name: "Mars", isGasPlanet:false},
+    {name: "Earth", isGasPlanet:false},
+    {name: "Jupiter", isGasPlanet:true},
+    {name: "Venus", isGasPlanet:false},
+    {name: "Neptune", isGasPlanet:true},
+    {name: "Uranus", isGasPlanet:true},
+  ]
   return (
     <div>
-      {users.map((user,key) => {
-        return <User name ={user.name} age={user.age} />
+      {planets.map((planet, key) =>{
+        if (planet.isGasPlanet) return <h1> {planet.name}</h1>;
       })}
     </div>
   );
 
 };
 
-
-const User = (props) => {
-  return (
-    <div>
-      {props.name} {props.age}
-    </div>
-  )
-}  
     
 export default App;
